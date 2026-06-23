@@ -1,240 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CX-Series Documentation</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #065A82 0%, #1C7293 50%, #02C39A 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .header {
-            text-align: center;
-            color: white;
-            margin-bottom: 50px;
-            padding: 40px 20px;
-        }
-        .header h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        .header p {
-            font-size: 18px;
-            opacity: 0.95;
-        }
-        .documents {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-        .doc-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-        .doc-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-        .doc-header {
-            padding: 25px;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .doc-card:nth-child(1) .doc-header {
-            background: linear-gradient(135deg, #065A82 0%, #1C7293 100%);
-        }
-        .doc-card:nth-child(2) .doc-header {
-            background: linear-gradient(135deg, #02C39A 0%, #1C7293 100%);
-        }
-        .doc-body {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .doc-body p {
-            color: #555;
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .features {
-            list-style: none;
-            margin: 15px 0;
-            flex-grow: 1;
-        }
-        .features li {
-            padding: 6px 0;
-            color: #666;
-            font-size: 14px;
-            padding-left: 25px;
-            position: relative;
-        }
-        .features li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #02C39A;
-            font-weight: bold;
-        }
-        .doc-footer {
-            padding: 20px 25px;
-            background: #f5f5f5;
-            border-top: 1px solid #eee;
-        }
-        .btn {
-            display: inline-block;
-            background: #065A82;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-            text-align: center;
-            width: 100%;
-        }
-        .btn:hover {
-            background: #02C39A;
-        }
-        .btn-sales {
-            background: #02C39A;
-        }
-        .btn-sales:hover {
-            background: #065A82;
-        }
-        .badge {
-            display: inline-block;
-            background: #ff4444;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-        .footer {
-            text-align: center;
-            color: white;
-            margin-top: 50px;
-            padding: 30px;
-            background: rgba(0,0,0,0.1);
-            border-radius: 10px;
-        }
-        .contact {
-            color: white;
-            font-size: 16px;
-            margin-top: 20px;
-        }
-        .contact a {
-            color: #02C39A;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 32px;
-            }
-            .documents {
-                grid-template-columns: 1fr;
-            }
-        }
+        body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #333; }
+        .header { background: linear-gradient(135deg, #065A82 0%, #02C39A 100%); color: white; padding: 60px 20px; text-align: center; }
+        .header h1 { font-size: 42px; margin-bottom: 10px; }
+        .header p { font-size: 18px; opacity: 0.95; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        .section { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .section h2 { color: #065A82; font-size: 24px; margin-bottom: 20px; }
+        .section p { line-height: 1.8; color: #555; margin-bottom: 15px; }
+        .doc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0; }
+        .doc-card { background: linear-gradient(135deg, #f0f8fb 0%, #f9f9f9 100%); border: 2px solid #1C7293; border-radius: 8px; padding: 25px; text-align: center; transition: transform 0.3s; }
+        .doc-card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,0.15); }
+        .doc-card h3 { color: #065A82; font-size: 18px; margin-bottom: 15px; }
+        .doc-card p { font-size: 14px; color: #666; margin-bottom: 20px; }
+        .btn { display: inline-block; background: linear-gradient(135deg, #065A82 0%, #02C39A 100%); color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: opacity 0.3s; }
+        .btn:hover { opacity: 0.9; }
+        .feature-list { list-style: none; margin: 20px 0; }
+        .feature-list li { padding: 10px 0; padding-left: 30px; position: relative; color: #555; }
+        .feature-list li:before { content: "✓"; position: absolute; left: 0; color: #02C39A; font-weight: bold; font-size: 18px; }
+        .footer { text-align: center; padding: 30px; color: #999; font-size: 14px; border-top: 1px solid #ddd; }
     </style>
 </head>
 <body>
 
+<div class="header">
+    <h1>🔬 CX-Series Documentation Hub</h1>
+    <p>Complete Product Reference for Sales, Marketing & Laboratory Professionals</p>
+</div>
+
 <div class="container">
-    <div class="header">
-        <h1>🔬 CX-Series</h1>
-        <p>Auto Coagulation Analyzer | CX-6000 & CX-9000</p>
-        <p style="font-size: 14px; margin-top: 15px; opacity: 0.9;">Complete Documentation & Resources</p>
-    </div>
 
-    <div class="documents">
-        <!-- SALES SUMMARY -->
+<div class="section">
+    <h2>Welcome to CX-Series Documentation</h2>
+    <p>This comprehensive resource provides everything you need to understand, sell, and operate CX-6000 and CX-9000 coagulation analyzers.</p>
+    <p>Each document combines practical sales content with detailed technical specifications, detection methods, and clinical applications.</p>
+</div>
+
+<div class="section">
+    <h2>📚 Available Documentation</h2>
+    
+    <div class="doc-grid">
         <div class="doc-card">
-            <div class="doc-header">
-                📊 Sales Summary
-                <span class="badge">NEW!</span>
-            </div>
-            <div class="doc-body">
-                <p><strong>Perfect for your sales team!</strong></p>
-                <p>Simplified, persuasive document focused on benefits, competitive advantages, and ROI.</p>
-                <ul class="features">
-                    <li>Key benefits & value proposition</li>
-                    <li>CX-6000 vs CX-9000 comparison</li>
-                    <li>Test menu overview</li>
-                    <li>Competitive advantages</li>
-                    <li>Easy-to-understand specs</li>
-                </ul>
-                <p style="color: #999; font-size: 13px; margin-top: 10px;">Best for: Sales presentations, hospital pitches, prospecting</p>
-            </div>
-            <div class="doc-footer">
-                <a href="./CX-Series_Sales_Summary.html" class="btn btn-sales">View Sales Summary</a>
-            </div>
+            <h3>📋 Product Summary & Technical Specifications</h3>
+            <p>Complete overview combining sales benefits, parameter details, detection methods, wavelengths, and technical specifications in one unified reference.</p>
+            <a href="CX-Series_Product_Summary.html" class="btn">View Full Document</a>
         </div>
-
-        <!-- TECHNICAL DOCUMENTATION -->
+        
         <div class="doc-card">
-            <div class="doc-header">
-                📖 Technical Documentation
-            </div>
-            <div class="doc-body">
-                <p><strong>Comprehensive technical reference!</strong></p>
-                <p>Complete specifications, test principles, clinical applications, and operational details.</p>
-                <ul class="features">
-                    <li>Complete system specifications</li>
-                    <li>All 7 test parameters explained</li>
-                    <li>APPT mixing study (detailed)</li>
-                    <li>Clinical applications</li>
-                    <li>Quality control procedures</li>
-                </ul>
-                <p style="color: #999; font-size: 13px; margin-top: 10px;">Best for: Lab professionals, technical training, reference</p>
-            </div>
-            <div class="doc-footer">
-                <a href="./CX-Series_Complete_Technical_Document.html" class="btn">View Full Documentation</a>
-            </div>
+            <h3>🔬 APPT Mixing Study Guide</h3>
+            <p>Comprehensive guide explaining mixing study principles, 7-step automated procedure, interpretation guidelines, and real clinical examples.</p>
+            <a href="CX-Series_Mixing_Study_Complete.html" class="btn">View Mixing Study Guide</a>
+        </div>
+        
+        <div class="doc-card">
+            <h3>🧪 Sales Summary</h3>
+            <p>Focused sales document highlighting key benefits, competitive advantages, parameter explanations, and system comparison.</p>
+            <a href="CX-Series_Sales_Summary.html" class="btn">View Sales Summary</a>
         </div>
     </div>
+</div>
 
-    <div class="footer">
-        <h2 style="margin-bottom: 15px;">About CX-Series</h2>
-        <p style="margin-bottom: 15px;">
-            Advanced optical-based coagulation analyzer for comprehensive blood coagulation and fibrinolysis testing. 
-            Trusted by leading hospitals and reference laboratories worldwide.
-        </p>
-        <p style="margin-bottom: 20px;">
-            <strong>CX-6000:</strong> 400 T/h | <strong>CX-9000:</strong> 450 T/h | <strong>7 Test Parameters</strong>
-        </p>
-        <div class="contact">
-            <strong>Contact:</strong> <a href="mailto:wuttachai49@gmail.com">wuttachai49@gmail.com</a>
-        </div>
-        <p style="margin-top: 20px; font-size: 13px; opacity: 0.8;">
-            © 2026 | Complete Documentation | Available 24/7 Online
-        </p>
-    </div>
+<div class="section">
+    <h2>🎯 Key Features Across CX-Series</h2>
+    <ul class="feature-list">
+        <li>7 complete coagulation parameters (PT, APPT, Fibrinogen, Thrombin Time, D-Dimer, FDP, AT-III)</li>
+        <li>400-450 tests/hour high-throughput capacity</li>
+        <li>Advanced optical detection with multiple wavelengths</li>
+        <li>1st & 2nd Derivative kinetic measurement (CX-9000)</li>
+        <li>800nm near-infrared capability for hemolytic samples (CX-9000 exclusive)</li>
+        <li>Automated 7-step APPT mixing study with 120-minute incubation (CX-9000)</li>
+        <li>Turbidimetric/kinetic detection for accurate clot formation measurement</li>
+        <li>Temperature-controlled sample processing (37°C ± 0.2°C)</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>🚀 Quick Navigation</h2>
+    <p><strong>New to CX-Series?</strong> Start with the <a href="CX-Series_Product_Summary.html" style="color: #02C39A; font-weight: bold;">Product Summary & Technical Specifications</a> - it has everything in one place.</p>
+    <p><strong>Selling to labs?</strong> Use the <a href="CX-Series_Sales_Summary.html" style="color: #02C39A; font-weight: bold;">Sales Summary</a> for competitive positioning and key benefits.</p>
+    <p><strong>Need mixing study details?</strong> Check the <a href="CX-Series_Mixing_Study_Complete.html" style="color: #02C39A; font-weight: bold;">APPT Mixing Study Guide</a> for clinical interpretation and examples.</p>
+</div>
+
+<div class="section" style="background: linear-gradient(135deg, #f0f8fb 0%, #f9f9f9 100%); border-left: 4px solid #02C39A;">
+    <h2 style="color: #02C39A;">Document Organization</h2>
+    <p><strong>All documentation is unified:</strong> The Product Summary & Technical Specifications document contains the complete information including parameter details, detection methods, wavelengths, clinical applications, mixing study procedures, and technical specifications - no need to jump between separate pages.</p>
+</div>
+
+</div>
+
+<div class="footer">
+    <p><strong>CX-Series Documentation</strong> | Complete Technical & Sales Reference</p>
+    <p>Last Updated: June 2026 | For Laboratory & Sales Professionals</p>
+    <p>Questions? Contact: wuttachai49@gmail.com</p>
 </div>
 
 </body>
