@@ -113,6 +113,93 @@
         .model-box strong {
             color: #02C39A;
         }
+        .test-parameter {
+            background: linear-gradient(135deg, #f0f8fb 0%, #ffffff 100%);
+            border: 2px solid #1C7293;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .test-parameter h3 {
+            color: #065A82;
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .test-badge {
+            display: inline-block;
+            background: #02C39A;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .principle-box {
+            background: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 5px;
+        }
+        .principle-box strong {
+            color: #065A82;
+        }
+        .pathway {
+            background: #f0f8fb;
+            border-left: 4px solid #02C39A;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #333;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .info-box {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .info-box strong {
+            color: #065A82;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .info-box span {
+            color: #666;
+            font-size: 13px;
+        }
+        .clinical-apps {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 5px;
+        }
+        .clinical-apps strong {
+            color: #2e7d32;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .clinical-apps ul {
+            margin-left: 20px;
+            margin: 8px 0;
+        }
+        .clinical-apps li {
+            color: #333;
+            font-size: 13px;
+            margin: 4px 0;
+        }
         .specs-table {
             width: 100%;
             border-collapse: collapse;
@@ -140,27 +227,6 @@
         }
         .highlight-box strong {
             color: #065A82;
-        }
-        .test-menu {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        .test-item {
-            background: #f0f8fb;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 3px solid #02C39A;
-        }
-        .test-item strong {
-            color: #065A82;
-            display: block;
-            margin-bottom: 5px;
-        }
-        .test-item small {
-            color: #666;
-            font-size: 12px;
         }
         .step-box {
             background: #f0f8fb;
@@ -225,16 +291,6 @@
             left: 0;
             color: #02C39A;
             font-weight: bold;
-        }
-        .clinical-value {
-            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
-            border-left: 4px solid #4caf50;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        .clinical-value strong {
-            color: #2e7d32;
         }
         .cta {
             display: inline-block;
@@ -354,327 +410,358 @@
     </div>
 </div>
 
-<!-- WHAT IT TESTS -->
+<!-- COMPREHENSIVE TEST MENU WITH DETAILED PRINCIPLES -->
 <div class="section">
-    <h2>🧪 Comprehensive Test Menu</h2>
-    <p>One system. Seven critical tests. Everything a coagulation lab needs:</p>
-    <div class="test-menu">
-        <div class="test-item">
-            <strong>PT</strong>
-            <small>Warfarin monitoring, INR levels</small>
-        </div>
-        <div class="test-item">
-            <strong>APPT</strong>
-            <small>Heparin monitoring, factor deficiencies</small>
-        </div>
-        <div class="test-item">
-            <strong>Fibrinogen</strong>
-            <small>Bleeding assessment, DIC detection</small>
-        </div>
-        <div class="test-item">
-            <strong>Thrombin Time</strong>
-            <small>Fibrinogen quality & heparin</small>
-        </div>
-        <div class="test-item">
-            <strong>D-Dimer</strong>
-            <small>Thrombosis/PE screening</small>
-        </div>
-        <div class="test-item">
-            <strong>FDP</strong>
-            <small>Fibrinolysis monitoring</small>
-        </div>
-        <div class="test-item">
-            <strong>AT-III</strong>
-            <small>Heparin effectiveness</small>
-        </div>
-    </div>
-</div>
+    <h2>🧪 Seven Comprehensive Tests - Detailed Principles</h2>
+    <p>One system. Seven critical tests. Each explained in detail:</p>
 
-<!-- DETAILED MIXING STUDY SECTION -->
-<div class="section" style="border-left-color: #02C39A;">
-    <h2>🎯 CX-9000 Exclusive: Automated APPT Mixing Study - Detailed</h2>
-    
-    <div class="highlight-box">
-        <strong>Why This Matters:</strong> APPT mixing study is a critical test for diagnosing complex coagulation problems. CX-9000 is the ONLY analyzer on the market with fully automated 7-step mixing study - your competitors are still doing it manually!
-    </div>
-
-    <h3>What Is APPT Mixing Study?</h3>
-    <p>When a patient has prolonged APPT (slow blood clotting), doctors need to know: Is it a <strong>factor deficiency</strong> (treatable) or an <strong>inhibitor</strong> (requires different treatment)? 
-    The mixing study answers this question by mixing patient blood with normal blood and seeing if clotting time improves.</p>
-
-    <h3>Step-By-Step: How CX-9000 Does It Automatically</h3>
-
-    <div class="step-box">
-        <span class="step-number">1</span>
-        <div class="step-title">Patient Sample Loading & Initial Test (APPT1)</div>
-        <div class="step-content">
-            <strong>What happens:</strong> Patient plasma is loaded into the analyzer and tested normally.<br>
-            <strong>Why:</strong> Confirms APPT is prolonged and mixing study is needed.<br>
-            <strong>Time:</strong> ~30 seconds
-        </div>
-    </div>
-
-    <div class="step-box">
-        <span class="step-number">2</span>
-        <div class="step-title">Normal Pooled Plasma (NPP) Preparation</div>
-        <div class="step-content">
-            <strong>What happens:</strong> Analyzer automatically prepares fresh normal plasma from quality control pool.<br>
-            <strong>Why:</strong> Normal plasma contains all coagulation factors at 100% activity.<br>
-            <strong>Key:</strong> This is the "reference" to see if patient factors can be corrected.
-        </div>
-    </div>
-
-    <div class="step-box">
-        <span class="step-number">3</span>
-        <div class="step-title">1:1 Mix Preparation - Immediate Test</div>
-        <div class="step-content">
-            <strong>What happens:</strong> Analyzer automatically mixes patient plasma + normal plasma in exact 1:1 ratio.<br>
-            <strong>Why:</strong> When normal plasma is added, if patient has low factors, their activity should rise to ~50% (therapeutic level).<br>
-            <strong>Result:</strong> If clotting time corrects, suggests factor deficiency. If doesn't correct, suggests inhibitor.
-        </div>
-    </div>
-
-    <div class="step-box">
-        <span class="step-number">4</span>
-        <div class="step-title">Immediate Mix Test (APPT2, APPT3)</div>
-        <div class="step-content">
-            <strong>What happens:</strong> Mixed sample is tested immediately (within 5 minutes of mixing).<br>
-            <strong>Results:</strong> APPT2 (first test) and APPT3 (second test for reliability check).<br>
-            <strong>Analyzer calculates:</strong> Correction Index (RI_CT) = [(APPT3-APPT2)/APPT1] × 100%
-        </div>
-    </div>
-
-    <div class="step-box">
-        <span class="step-number">5</span>
-        <div class="step-title">Interpretation: Immediate Correction Decision</div>
-        <div class="step-content">
-            <strong>The Magic Number: 11%</strong><br>
-            • If RI_CT < 11% → CORRECTED (factor deficiency)<br>
-            • If RI_CT > 11% → NOT CORRECTED (inhibitor present)<br>
-            <strong>But wait...</strong> Some inhibitors only appear after time/temperature. CX-9000 doesn't stop here!
-        </div>
-    </div>
-
-    <div class="step-box">
-        <span class="step-number">6</span>
-        <div class="step-title">Incubation: Time-Temperature Dependency Check</div>
-        <div class="step-content">
-            <strong>What happens:</strong> Mixed plasma is incubated at 37°C (body temperature) for up to 120 MINUTES (2 hours).<br>
-            <strong>Why:</strong> Some inhibitors (like acquired Factor VIII antibodies) are "time-dependent" - they don't show up immediately but develop over time.<br>
-            <strong>This is where CX-9000 beats competitors:</strong> Most analyzers can only incubate 12-15 minutes. CX-9000 goes full 2 hours!
-        </div>
-    </div>
-
-    <div class="step-box">
-        <span class="step-number">7</span>
-        <div class="step-title">Post-Incubation Test (APPT6, APPT7)</div>
-        <div class="step-content">
-            <strong>What happens:</strong> After 120-minute incubation, mixed plasma is tested again (APPT6 and APPT7).<br>
-            <strong>Analyzer calculates:</strong> RI_ICT = [(APPT7-APPT6)/APPT4] × 100%<br>
-            <strong>Also measures:</strong> Time difference between APPT7 and APPT6 (looks for >3 second difference for time-dependent inhibitors)<br>
-            <strong>Final Diagnosis:</strong> Analyzer automatically determines if inhibitor is time-dependent or immediate-acting.
-        </div>
-    </div>
-
-    <h3>Real-World Interpretation Examples</h3>
-
-    <div class="interpretation-grid">
-        <div class="interpretation-card">
-            <h4>✅ Factor Deficiency</h4>
-            <p><strong>Patient Scenario:</strong> Hemophilia A (low Factor VIII)</p>
-            <ul>
-                <li>APPT1: 65 seconds (prolonged)</li>
-                <li>Immediate Mix: Corrects to 35 seconds</li>
-                <li>RI_CT: 3% (<strong>< 11%</strong> = CORRECTED)</li>
-                <li>Post-incubation: Still corrected</li>
-            </ul>
-            <p style="margin-top: 10px; color: #2e7d32;"><strong>Treatment:</strong> Factor VIII replacement therapy</p>
+    <!-- PT TEST -->
+    <div class="test-parameter">
+        <h3>1️⃣ PT (Prothrombin Time) <span class="test-badge">Extrinsic Pathway</span></h3>
+        
+        <div class="principle-box">
+            <strong>What It Measures:</strong> How quickly blood clots using the extrinsic (tissue factor) pathway
         </div>
 
-        <div class="interpretation-card">
-            <h4>⚠️ Immediate Inhibitor</h4>
-            <p><strong>Patient Scenario:</strong> Lupus Anticoagulant</p>
-            <ul>
-                <li>APPT1: 62 seconds (prolonged)</li>
-                <li>Immediate Mix: Stays 55 seconds</li>
-                <li>RI_CT: 15% (<strong>> 11%</strong> = NOT CORRECTED)</li>
-                <li>Post-incubation: Still not corrected</li>
-                <li>ΔAPPT < 3 seconds (not time-dependent)</li>
-            </ul>
-            <p style="margin-top: 10px; color: #d32f2f;"><strong>Action:</strong> Further testing for inhibitor type, specialist referral</p>
+        <div class="pathway">
+            <strong>Biochemical Cascade:</strong><br>
+            Tissue Damage → Tissue Factor (TF) + Factor VII → Factor X → Prothrombin (II) → Thrombin → Fibrin Clot
         </div>
 
-        <div class="interpretation-card">
-            <h4>🔴 Time-Dependent Inhibitor</h4>
-            <p><strong>Patient Scenario:</strong> Acquired Factor VIII Inhibitor (developing)</p>
-            <ul>
-                <li>APPT1: 58 seconds (prolonged)</li>
-                <li>Immediate Mix: Corrects to 38 seconds</li>
-                <li>RI_CT: 5% (<strong>< 11%</strong> = CORRECTED)</li>
-                <li>Post-incubation: NOW prolonged again!</li>
-                <li>RI_ICT: 25% with ΔAPPT > 3s (<strong>DEVELOPED!</strong>)</li>
-            </ul>
-            <p style="margin-top: 10px; color: #d32f2f;"><strong>Warning:</strong> Inhibitor emerging, needs immediate follow-up and specialist care</p>
-        </div>
-    </div>
-
-    <div class="clinical-value">
-        <h4>💡 Clinical Value & Patient Impact</h4>
-        <p><strong>Why 7-Step Automation Matters:</strong></p>
-        <ul style="margin-left: 20px; margin-top: 10px;">
-            <li><strong>Faster Diagnosis:</strong> Full results in ~2.5 hours vs 1-2 days manual method</li>
-            <li><strong>Better Accuracy:</strong> No technician calculation errors, automated precision</li>
-            <li><strong>Catches Developing Inhibitors:</strong> Extended incubation finds time-dependent inhibitors others miss</li>
-            <li><strong>Reduced Patient Risk:</strong> Early detection of inhibitors prevents serious bleeding complications</li>
-            <li><strong>Better Treatment Decisions:</strong> Doctors know immediately if it's factor deficiency (simple replacement) vs inhibitor (complex management)</li>
+        <h4>Why PT Is Important:</h4>
+        <ul style="margin-left: 20px;">
+            <li><strong>Warfarin Monitoring:</strong> Warfarin blocks Factors II, VII, IX, X (vitamin K dependent). PT increases → INR increases → dose adjustment needed</li>
+            <li><strong>Liver Function:</strong> Liver produces most coagulation factors. PT prolongation suggests liver disease</li>
+            <li><strong>Vitamin K Status:</strong> Quick detection of vitamin K deficiency (malabsorption, antibiotics)</li>
+            <li><strong>Pre-operative Screening:</strong> Identifies bleeding risk before surgery</li>
         </ul>
+
+        <div class="info-grid">
+            <div class="info-box">
+                <strong>Normal Range:</strong>
+                <span>11-13.5 seconds (varies by reagent)</span>
+            </div>
+            <div class="info-box">
+                <strong>Critical Value:</strong>
+                <span>Usually >2× normal or critical for patient</span>
+            </div>
+            <div class="info-box">
+                <strong>INR (Therapeutic):</strong>
+                <span>2.0-3.0 (warfarin) or 2.5-3.5 (mechanical valve)</span>
+            </div>
+        </div>
+
+        <div class="clinical-apps">
+            <strong>Clinical Applications:</strong>
+            <ul>
+                <li>Monitoring patients on Warfarin (anticoagulation)</li>
+                <li>Assessing liver synthetic function</li>
+                <li>Detecting vitamin K deficiency</li>
+                <li>Pre-operative bleeding risk</li>
+                <li>Monitoring liver disease</li>
+            </ul>
+        </div>
     </div>
 
-    <h3>Why CX-9000 Mixing Study is Superior</h3>
-    <table class="specs-table">
-        <tr>
-            <th>Feature</th>
-            <th>CX-9000</th>
-            <th>Competitors</th>
-        </tr>
-        <tr>
-            <td><strong>Automated Steps</strong></td>
-            <td>7 steps (FULLY automatic)</td>
-            <td>2-3 steps (manual mixing)</td>
-        </tr>
-        <tr>
-            <td><strong>Max Incubation Time</strong></td>
-            <td>120 minutes (2 hours)</td>
-            <td>12-15 minutes</td>
-        </tr>
-        <tr>
-            <td><strong>Time-Dependent Detection</strong></td>
-            <td>YES - Extended incubation catches developing inhibitors</td>
-            <td>Limited - May miss emerging inhibitors</td>
-        </tr>
-        <tr>
-            <td><strong>Manual Mixing Error Risk</strong></td>
-            <td>ZERO - Fully automated</td>
-            <td>HIGH - Human error in ratios</td>
-        </tr>
-        <tr>
-            <td><strong>Technician Time per Test</strong></td>
-            <td>5 minutes (load sample, analyzer does everything)</td>
-            <td>30-45 minutes (manual procedures)</td>
-        </tr>
-        <tr>
-            <td><strong>Result Consistency</strong></td>
-            <td>Identical results every time</td>
-            <td>Varies by technician</td>
-        </tr>
-        <tr>
-            <td><strong>Clinical Advantage</strong></td>
-            <td>Gold standard for complex case diagnosis</td>
-            <td>Basic screening only</td>
-        </tr>
-    </table>
-</div>
+    <!-- APPT TEST -->
+    <div class="test-parameter">
+        <h3>2️⃣ APPT (Activated Partial Thromboplastin Time) <span class="test-badge">Intrinsic Pathway</span></h3>
+        
+        <div class="principle-box">
+            <strong>What It Measures:</strong> How quickly blood clots using the intrinsic (contact activation) pathway - the most complex pathway
+        </div>
 
-<!-- TECHNICAL EXCELLENCE -->
-<div class="section">
-    <h2>🔍 Technical Excellence You Can Trust</h2>
-    <h3>Optical Detection System</h3>
-    <table class="specs-table">
-        <tr>
-            <th>Feature</th>
-            <th>Specification</th>
-            <th>What It Means</th>
-        </tr>
-        <tr>
-            <td><strong>Detection Method</strong></td>
-            <td>Turbidimetric/Kinetic (Multi-wavelength)</td>
-            <td>Catches subtle changes in coagulation - better accuracy</td>
-        </tr>
-        <tr>
-            <td><strong>Wavelengths</strong></td>
-            <td>CX-6000: 3 | CX-9000: 4 wavelengths</td>
-            <td>More flexibility for different test types and reagents</td>
-        </tr>
-        <tr>
-            <td><strong>Precision</strong></td>
-            <td>Within-run CV: <5%</td>
-            <td>Consistent, reliable results every time</td>
-        </tr>
-        <tr>
-            <td><strong>Sample Quality</strong></td>
-            <td>Auto-detects Hemolysis, Icterus, Lipemia</td>
-            <td>Prevents bad results from reaching doctors</td>
-        </tr>
-        <tr>
-            <td><strong>Response Time</strong></td>
-            <td><30 seconds for STAT (PT)</td>
-            <td>Critical results when minutes matter</td>
-        </tr>
-    </table>
-</div>
+        <div class="pathway">
+            <strong>Biochemical Cascade (Complex 6-7 Steps):</strong><br>
+            Contact Activator (Kaolin/Silica) + Phospholipid → Factor XII → XI → IX + VIII (AMPLIFICATION STEP) → X → II (Thrombin) → Fibrin Clot
+        </div>
 
-<!-- WHY CHOOSE CX -->
-<div class="section">
-    <h2>✅ Competitive Advantages</h2>
-    <h3>What Makes CX-Series Stand Out:</h3>
-    <ul style="margin-left: 20px; font-size: 15px;">
-        <li><strong>Advanced Kinetic Analysis:</strong> Detects subtle abnormalities that basic systems miss (Lupus anticoagulant, inhibitors)</li>
-        <li><strong>Comprehensive Solution:</strong> 7 tests in one system - no need for multiple instruments</li>
-        <li><strong>Automation Leadership:</strong> Most advanced automated mixing study on the market (CX-9000)</li>
-        <li><strong>Proven Accuracy:</strong> ±5% for PT/APPT, validated against reference methods</li>
-        <li><strong>Easy Integration:</strong> LIS/EHR connectivity, complete data management, audit trails</li>
-        <li><strong>Operational Efficiency:</strong> 2-week reagent stability, minimal waste, low cost per test</li>
-        <li><strong>Future-Proof:</strong> Scalable from CX-6000 to CX-9000 as lab grows</li>
-    </ul>
-</div>
+        <h4>Why APPT Is Critical:</h4>
+        <ul style="margin-left: 20px;">
+            <li><strong>Heparin Monitoring:</strong> Heparin enhances Antithrombin which inhibits Factors II, X, IX → APPT increases. Tight therapeutic window (1.5-2.5× baseline)</li>
+            <li><strong>Factor Deficiencies:</strong> Detects low Factor VIII (Hemophilia A), Factor IX (Hemophilia B), Factor XI, Factor XII</li>
+            <li><strong>Inhibitor Detection:</strong> Lupus anticoagulant, Factor VIII antibodies show as prolonged APPT that doesn't correct with mixing</li>
+            <li><strong>Complex Cascade:</strong> 6-7 steps mean many failure points - needs advanced kinetic analysis to detect all abnormalities</li>
+        </ul>
 
-<!-- QUICK SPECS -->
-<div class="section">
-    <h2>⚙️ Quick Specifications</h2>
-    <table class="specs-table">
-        <tr>
-            <th>Category</th>
-            <th>Specification</th>
-        </tr>
-        <tr>
-            <td><strong>Throughput</strong></td>
-            <td>400 T/h (CX-6000) | 450 T/h (CX-9000)</td>
-        </tr>
-        <tr>
-            <td><strong>Sample Capacity</strong></td>
-            <td>40 samples maximum per run</td>
-        </tr>
-        <tr>
-            <td><strong>Test Channels</strong></td>
-            <td>8 test channels + 16 incubation channels</td>
-        </tr>
-        <tr>
-            <td><strong>Data Storage</strong></td>
-            <td>100,000+ results with full audit trail</td>
-        </tr>
-        <tr>
-            <td><strong>Reagent Stability</strong></td>
-            <td>2 weeks onboard (no dead volume)</td>
-        </tr>
-        <tr>
-            <td><strong>Accuracy (PT/APPT)</strong></td>
-            <td>±5% vs reference method</td>
-        </tr>
-        <tr>
-            <td><strong>Precision (CV)</strong></td>
-            <td><5% within-run & between-run</td>
-        </tr>
-        <tr>
-            <td><strong>Operating System</strong></td>
-            <td>Windows 10 (64-bit) - Familiar interface</td>
-        </tr>
-    </table>
+        <div class="info-grid">
+            <div class="info-box">
+                <strong>Normal Range:</strong>
+                <span>28-38 seconds (varies by reagent)</span>
+            </div>
+            <div class="info-box">
+                <strong>Therapeutic (Heparin):</strong>
+                <span>1.5-2.5× patient baseline</span>
+            </div>
+            <div class="info-box">
+                <strong>Criticality:</strong>
+                <span>Narrow therapeutic window - requires precision</span>
+            </div>
+        </div>
+
+        <div class="clinical-apps">
+            <strong>Clinical Applications:</strong>
+            <ul>
+                <li>Monitoring heparin therapy (narrow window)</li>
+                <li>Detecting hemophilia A & B (factor deficiencies)</li>
+                <li>Identifying Lupus anticoagulant</li>
+                <li>Detecting Factor VIII inhibitor antibodies</li>
+                <li>Screening for intrinsic pathway disorders</li>
+                <li>Mixing study for differential diagnosis</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- FIBRINOGEN TEST -->
+    <div class="test-parameter">
+        <h3>3️⃣ FIB (Fibrinogen) <span class="test-badge">Common Pathway</span></h3>
+        
+        <div class="principle-box">
+            <strong>What It Measures:</strong> The amount of fibrinogen (functional protein that forms clot) using Clauss method - direct thrombin addition
+        </div>
+
+        <div class="pathway">
+            <strong>Test Procedure:</strong><br>
+            Direct Thrombin Addition → Bypasses all upstream factors → Measures only fibrin clot formation time
+        </div>
+
+        <h4>Why Fibrinogen Is Critical:</h4>
+        <ul style="margin-left: 20px;">
+            <li><strong>Bleeding Risk:</strong> Low fibrinogen (hypofibrinogenemia) = high bleeding risk. <2g/L = severe bleeding risk</li>
+            <li><strong>DIC Detection:</strong> DIC = Disseminated Intravascular Coagulation - fibrinogen consumed rapidly, levels drop dangerously</li>
+            <li><strong>Inflammatory Marker:</strong> Elevated fibrinogen indicates acute phase response (infection, inflammation, surgery stress)</li>
+            <li><strong>Quality vs Quantity:</strong> Measures functional fibrinogen - some patients have dysfibrinogenemia (abnormal function despite normal quantity)</li>
+        </ul>
+
+        <div class="info-grid">
+            <div class="info-box">
+                <strong>Normal Range:</strong>
+                <span>2.0-4.0 g/L</span>
+            </div>
+            <div class="info-box">
+                <strong>Critical Low:</strong>
+                <span><1.0 g/L = Severe bleeding risk</span>
+            </div>
+            <div class="info-box">
+                <strong>Elevated Significance:</strong>
+                <span>Inflammation, infection, acute phase</span>
+            </div>
+        </div>
+
+        <div class="clinical-apps">
+            <strong>Clinical Applications:</strong>
+            <ul>
+                <li>Assessing bleeding risk</li>
+                <li>Detecting DIC (fibrinogen consumed)</li>
+                <li>Monitoring liver disease (liver produces fibrinogen)</li>
+                <li>Identifying hypofibrinogenemia</li>
+                <li>Detecting dysfibrinogenemia (abnormal function)</li>
+                <li>Post-op monitoring</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- THROMBIN TIME TEST -->
+    <div class="test-parameter">
+        <h3>4️⃣ TT (Thrombin Time) <span class="test-badge">Fibrin Formation</span></h3>
+        
+        <div class="principle-box">
+            <strong>What It Measures:</strong> Time to fibrin clot formation after direct thrombin addition - tests the final step only
+        </div>
+
+        <div class="pathway">
+            <strong>Test Procedure:</strong><br>
+            Direct Thrombin (high concentration) → Fibrinogen → Fibrin Clot Formation Time
+        </div>
+
+        <h4>Why Thrombin Time Is Useful:</h4>
+        <ul style="margin-left: 20px;">
+            <li><strong>Heparin Detection:</strong> Heparin directly interferes with thrombin → Prolongs TT. Quick screening for heparin contamination</li>
+            <li><strong>Fibrinogen Function:</strong> Tests functional fibrinogen quality specifically (not just quantity like fibrinogen test)</li>
+            <li><strong>Dysfibrinogenemia:</strong> Abnormal fibrinogen molecules can't form proper clots despite normal quantity</li>
+            <li><strong>Anticoagulant Drugs:</strong> Detects direct thrombin inhibitors (dabigatran) - prolongs TT</li>
+        </ul>
+
+        <div class="info-grid">
+            <div class="info-box">
+                <strong>Normal Range:</strong>
+                <span>14-21 seconds (varies by reagent)</span>
+            </div>
+            <div class="info-box">
+                <strong>Prolonged Significance:</strong>
+                <span>Heparin, direct inhibitors, dysfibrinogen</span>
+            </div>
+            <div class="info-box">
+                <strong>Clinical Use:</strong>
+                <span>Heparin screening & confirmation</span>
+            </div>
+        </div>
+
+        <div class="clinical-apps">
+            <strong>Clinical Applications:</strong>
+            <ul>
+                <li>Detecting heparin presence/contamination</li>
+                <li>Assessing fibrinogen function quality</li>
+                <li>Identifying dysfibrinogenemia</li>
+                <li>Detecting direct thrombin inhibitors</li>
+                <li>Confirming prolonged PT/APPT cause</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- D-DIMER TEST -->
+    <div class="test-parameter">
+        <h3>5️⃣ D-Dimer <span class="test-badge">Fibrin Breakdown</span></h3>
+        
+        <div class="principle-box">
+            <strong>What It Measures:</strong> Breakdown products of fibrin clots - detects active fibrinolysis and thrombosis
+        </div>
+
+        <div class="pathway">
+            <strong>Biological Process:</strong><br>
+            Fibrin Clot Forms → Plasmin Breaks It Down → D-Dimer Released Into Blood
+        </div>
+
+        <h4>Why D-Dimer Matters:</h4>
+        <ul style="margin-left: 20px;">
+            <li><strong>Thrombosis Screening:</strong> D-Dimer ELEVATED = Suggests blood clot (DVT, PE, thrombosis). But elevated D-Dimer has many causes (infection, cancer, post-op)</li>
+            <li><strong>High Negative Predictive Value (NPV):</strong> NORMAL D-Dimer = 95% chance NO thrombosis. Very useful for ruling OUT disease</li>
+            <li><strong>DIC Indicator:</strong> In DIC, both clotting AND breakdown increase → D-Dimer very high</li>
+            <li><strong>Fibrinolysis Marker:</strong> Indicates active clot breakdown - normal in healthy people, elevated with active clotting</li>
+        </ul>
+
+        <div class="info-grid">
+            <div class="info-box">
+                <strong>Normal Range:</strong>
+                <span><0.5 mg/L (FEU) or <250 ng/mL</span>
+            </div>
+            <div class="info-box">
+                <strong>Elevated Means:</strong>
+                <span>Active clot OR recent clotting event</span>
+            </div>
+            <div class="info-box">
+                <strong>Rule-Out Test:</strong>
+                <span>Normal = 95% NPV for PE/DVT</span>
+            </div>
+        </div>
+
+        <div class="clinical-apps">
+            <strong>Clinical Applications:</strong>
+            <ul>
+                <li>Ruling out DVT/PE (high NPV)</li>
+                <li>Detecting active thrombosis</li>
+                <li>DIC screening</li>
+                <li>Post-operative monitoring</li>
+                <li>Sepsis assessment</li>
+                <li>Cancer-related thrombosis screening</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- FDP TEST -->
+    <div class="test-parameter">
+        <h3>6️⃣ FDP (Fibrin Degradation Products) <span class="test-badge">Fibrinolysis Marker</span></h3>
+        
+        <div class="principle-box">
+            <strong>What It Measures:</strong> Early breakdown products of BOTH fibrinogen AND fibrin - more sensitive than D-Dimer
+        </div>
+
+        <div class="pathway">
+            <strong>Biological Process:</strong><br>
+            Plasmin Breaks Down Fibrinogen & Fibrin → Multiple Fragment Sizes (X, D, E, DD, DDD) → FDP Released
+        </div>
+
+        <h4>Why FDP Is Superior to D-Dimer:</h4>
+        <ul style="margin-left: 20px;">
+            <li><strong>More Sensitive:</strong> Detects breakdown of BOTH fibrinogen (before clotting) AND fibrin (after clotting) - D-Dimer only sees fibrin fragments</li>
+            <li><strong>DIC Gold Standard:</strong> In DIC, FDP often more elevated than D-Dimer because both fibrinogen breakdown AND fibrin breakdown occurring</li>
+            <li><strong>Early Detection:</strong> Can show fibrinolysis activation earlier than D-Dimer</li>
+            <li><strong>Acute Fibrinolysis:</strong> Primary fibrinolysis (bleeding with clot breakdown) vs secondary fibrinolysis (normal)</li>
+        </ul>
+
+        <div class="info-grid">
+            <div class="info-box">
+                <strong>Normal Range:</strong>
+                <span><250 μg/mL (varies by assay)</span>
+            </div>
+            <div class="info-box">
+                <strong>Sensitivity:</strong>
+                <span>More sensitive than D-Dimer</span>
+            </div>
+            <div class="info-box">
+                <strong>DIC Indicator:</strong>
+                <span>Gold standard for DIC detection</span>
+            </div>
+        </div>
+
+        <div class="clinical-apps">
+            <strong>Clinical Applications:</strong>
+            <ul>
+                <li>DIC detection (more sensitive than D-Dimer)</li>
+                <li>Detecting primary fibrinolysis</li>
+                <li>Monitoring fibrinolytic therapy (tPA)</li>
+                <li>Severe sepsis assessment</li>
+                <li>Obstetric emergencies (placental abruption)</li>
+                <li>Massive transfusion protocols</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- AT-III TEST -->
+    <div class="test-parameter">
+        <h3>7️⃣ AT-III (Antithrombin III) <span class="test-badge">Natural Anticoagulant</span></h3>
+        
+        <div class="principle-box">
+            <strong>What It Measures:</strong> Activity of natural anticoagulant that inhibits thrombin and other factors - critical for heparin function
+        </div>
+
+        <div class="pathway">
+            <strong>Biological Role:</strong><br>
+            AT-III (Natural Inhibitor) + Thrombin & Factors II, IX, X, XI, XII → Inactivates Them → Prevents Excess Clotting
+        </div>
+
+        <h4>Why AT-III Is Critical:</h4>
+        <ul style="margin-left: 20px;">
+            <li><strong>Heparin Effectiveness:</strong> HEPARIN REQUIRES AT-III TO WORK! Heparin enhances AT-III activity 1000-fold. Low AT-III = heparin resistance</li>
+            <li><strong>Thrombosis Risk:</strong> Low AT-III (hereditary or acquired) = High thrombosis risk (blood clots too easily)</li>
+            <li><strong>Natural Anticoagulation Reserve:</strong> Shows how much natural protection patient has against clotting</li>
+            <li><strong>Sepsis Indicator:</strong> In severe sepsis, AT-III consumed rapidly → Low levels = Poor prognosis</li>
+        </ul>
+
+        <div class="info-grid">
+            <div class="info-box">
+                <strong>Normal Range:</strong>
+                <span>80-120% activity</span>
+            </div>
+            <div class="info-box">
+                <strong>Low AT-III Problem:</strong>
+                <span>Heparin won't work properly</span>
+            </div>
+            <div class="info-box">
+                <strong>Heparin Resistance:</strong>
+                <span>May need higher heparin doses</span>
+            </div>
+        </div>
+
+        <div class="clinical-apps">
+            <strong>Clinical Applications:</strong>
+            <ul>
+                <li>Assessing heparin effectiveness</li>
+                <li>Detecting heparin resistance (low AT-III)</li>
+                <li>Identifying hereditary AT-III deficiency</li>
+                <li>Thrombosis risk assessment</li>
+                <li>Sepsis severity assessment</li>
+                <li>DIC monitoring (AT-III consumed)</li>
+            </ul>
+        </div>
+    </div>
+
 </div>
 
 <!-- CALL TO ACTION -->
 <div class="section" style="background: linear-gradient(135deg, #065A82 0%, #1C7293 100%); color: white; border-left: none;">
     <h2 style="color: white;">Ready to Transform Your Lab?</h2>
-    <p>The CX-Series delivers the speed, accuracy, and automation your laboratory needs to improve patient care while reducing operational costs.</p>
+    <p>The CX-Series delivers comprehensive testing with the accuracy, speed, and automation your laboratory needs to improve patient care.</p>
     <div style="margin: 20px 0;">
         <a href="mailto:wuttachai49@gmail.com?subject=CX-Series%20Inquiry" class="cta" style="background: #02C39A; color: #065A82;">📧 Request Information</a>
         <a href="https://wuttachai49.github.io/cx-series-documentation/" class="cta" style="background: white; color: #065A82;">📖 View Full Documentation</a>
