@@ -53,6 +53,13 @@
             margin-top: 20px;
             margin-bottom: 12px;
         }
+        .section h4 {
+            color: #02C39A;
+            font-size: 15px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -155,6 +162,80 @@
             color: #666;
             font-size: 12px;
         }
+        .step-box {
+            background: #f0f8fb;
+            border-left: 4px solid #02C39A;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .step-number {
+            display: inline-block;
+            background: #065A82;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #065A82;
+            font-size: 15px;
+        }
+        .step-content {
+            margin-left: 40px;
+            margin-top: 8px;
+            color: #555;
+        }
+        .interpretation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .interpretation-card {
+            background: white;
+            border: 2px solid #065A82;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .interpretation-card h4 {
+            color: #065A82;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        .interpretation-card ul {
+            list-style: none;
+            margin: 0;
+        }
+        .interpretation-card li {
+            padding: 6px 0;
+            font-size: 13px;
+            color: #555;
+            padding-left: 20px;
+            position: relative;
+        }
+        .interpretation-card li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #02C39A;
+            font-weight: bold;
+        }
+        .clinical-value {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .clinical-value strong {
+            color: #2e7d32;
+        }
         .cta {
             display: inline-block;
             background: #065A82;
@@ -181,6 +262,9 @@
                 grid-template-columns: 1fr;
             }
             .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .interpretation-grid {
                 grid-template-columns: 1fr;
             }
             .header h1 {
@@ -306,23 +390,189 @@
     </div>
 </div>
 
-<!-- SPECIAL FEATURE: MIXING STUDY -->
+<!-- DETAILED MIXING STUDY SECTION -->
 <div class="section" style="border-left-color: #02C39A;">
-    <h2>🎯 CX-9000 Special Feature: Automated Mixing Study</h2>
-    <p><strong>Only CX-9000 offers fully automated APPT mixing study</strong> - a critical test for complex cases.</p>
-    <h3>What It Does:</h3>
-    <ul style="margin-left: 20px;">
-        <li>Automatically differentiates between factor deficiency vs inhibitor</li>
-        <li>7-step fully automatic procedure (competitors: 2-3 steps)</li>
-        <li>Extended incubation (up to 2 hours) for time-dependent inhibitors</li>
-        <li>Eliminates manual calculations and interpretation errors</li>
-    </ul>
-    <h3>Clinical Value:</h3>
-    <ul style="margin-left: 20px;">
-        <li>Faster diagnosis of coagulation disorders</li>
-        <li>Better detection of Lupus anticoagulant and inhibitors</li>
-        <li>Improved patient care for complex bleeding cases</li>
-    </ul>
+    <h2>🎯 CX-9000 Exclusive: Automated APPT Mixing Study - Detailed</h2>
+    
+    <div class="highlight-box">
+        <strong>Why This Matters:</strong> APPT mixing study is a critical test for diagnosing complex coagulation problems. CX-9000 is the ONLY analyzer on the market with fully automated 7-step mixing study - your competitors are still doing it manually!
+    </div>
+
+    <h3>What Is APPT Mixing Study?</h3>
+    <p>When a patient has prolonged APPT (slow blood clotting), doctors need to know: Is it a <strong>factor deficiency</strong> (treatable) or an <strong>inhibitor</strong> (requires different treatment)? 
+    The mixing study answers this question by mixing patient blood with normal blood and seeing if clotting time improves.</p>
+
+    <h3>Step-By-Step: How CX-9000 Does It Automatically</h3>
+
+    <div class="step-box">
+        <span class="step-number">1</span>
+        <div class="step-title">Patient Sample Loading & Initial Test (APPT1)</div>
+        <div class="step-content">
+            <strong>What happens:</strong> Patient plasma is loaded into the analyzer and tested normally.<br>
+            <strong>Why:</strong> Confirms APPT is prolonged and mixing study is needed.<br>
+            <strong>Time:</strong> ~30 seconds
+        </div>
+    </div>
+
+    <div class="step-box">
+        <span class="step-number">2</span>
+        <div class="step-title">Normal Pooled Plasma (NPP) Preparation</div>
+        <div class="step-content">
+            <strong>What happens:</strong> Analyzer automatically prepares fresh normal plasma from quality control pool.<br>
+            <strong>Why:</strong> Normal plasma contains all coagulation factors at 100% activity.<br>
+            <strong>Key:</strong> This is the "reference" to see if patient factors can be corrected.
+        </div>
+    </div>
+
+    <div class="step-box">
+        <span class="step-number">3</span>
+        <div class="step-title">1:1 Mix Preparation - Immediate Test</div>
+        <div class="step-content">
+            <strong>What happens:</strong> Analyzer automatically mixes patient plasma + normal plasma in exact 1:1 ratio.<br>
+            <strong>Why:</strong> When normal plasma is added, if patient has low factors, their activity should rise to ~50% (therapeutic level).<br>
+            <strong>Result:</strong> If clotting time corrects, suggests factor deficiency. If doesn't correct, suggests inhibitor.
+        </div>
+    </div>
+
+    <div class="step-box">
+        <span class="step-number">4</span>
+        <div class="step-title">Immediate Mix Test (APPT2, APPT3)</div>
+        <div class="step-content">
+            <strong>What happens:</strong> Mixed sample is tested immediately (within 5 minutes of mixing).<br>
+            <strong>Results:</strong> APPT2 (first test) and APPT3 (second test for reliability check).<br>
+            <strong>Analyzer calculates:</strong> Correction Index (RI_CT) = [(APPT3-APPT2)/APPT1] × 100%
+        </div>
+    </div>
+
+    <div class="step-box">
+        <span class="step-number">5</span>
+        <div class="step-title">Interpretation: Immediate Correction Decision</div>
+        <div class="step-content">
+            <strong>The Magic Number: 11%</strong><br>
+            • If RI_CT < 11% → CORRECTED (factor deficiency)<br>
+            • If RI_CT > 11% → NOT CORRECTED (inhibitor present)<br>
+            <strong>But wait...</strong> Some inhibitors only appear after time/temperature. CX-9000 doesn't stop here!
+        </div>
+    </div>
+
+    <div class="step-box">
+        <span class="step-number">6</span>
+        <div class="step-title">Incubation: Time-Temperature Dependency Check</div>
+        <div class="step-content">
+            <strong>What happens:</strong> Mixed plasma is incubated at 37°C (body temperature) for up to 120 MINUTES (2 hours).<br>
+            <strong>Why:</strong> Some inhibitors (like acquired Factor VIII antibodies) are "time-dependent" - they don't show up immediately but develop over time.<br>
+            <strong>This is where CX-9000 beats competitors:</strong> Most analyzers can only incubate 12-15 minutes. CX-9000 goes full 2 hours!
+        </div>
+    </div>
+
+    <div class="step-box">
+        <span class="step-number">7</span>
+        <div class="step-title">Post-Incubation Test (APPT6, APPT7)</div>
+        <div class="step-content">
+            <strong>What happens:</strong> After 120-minute incubation, mixed plasma is tested again (APPT6 and APPT7).<br>
+            <strong>Analyzer calculates:</strong> RI_ICT = [(APPT7-APPT6)/APPT4] × 100%<br>
+            <strong>Also measures:</strong> Time difference between APPT7 and APPT6 (looks for >3 second difference for time-dependent inhibitors)<br>
+            <strong>Final Diagnosis:</strong> Analyzer automatically determines if inhibitor is time-dependent or immediate-acting.
+        </div>
+    </div>
+
+    <h3>Real-World Interpretation Examples</h3>
+
+    <div class="interpretation-grid">
+        <div class="interpretation-card">
+            <h4>✅ Factor Deficiency</h4>
+            <p><strong>Patient Scenario:</strong> Hemophilia A (low Factor VIII)</p>
+            <ul>
+                <li>APPT1: 65 seconds (prolonged)</li>
+                <li>Immediate Mix: Corrects to 35 seconds</li>
+                <li>RI_CT: 3% (<strong>< 11%</strong> = CORRECTED)</li>
+                <li>Post-incubation: Still corrected</li>
+            </ul>
+            <p style="margin-top: 10px; color: #2e7d32;"><strong>Treatment:</strong> Factor VIII replacement therapy</p>
+        </div>
+
+        <div class="interpretation-card">
+            <h4>⚠️ Immediate Inhibitor</h4>
+            <p><strong>Patient Scenario:</strong> Lupus Anticoagulant</p>
+            <ul>
+                <li>APPT1: 62 seconds (prolonged)</li>
+                <li>Immediate Mix: Stays 55 seconds</li>
+                <li>RI_CT: 15% (<strong>> 11%</strong> = NOT CORRECTED)</li>
+                <li>Post-incubation: Still not corrected</li>
+                <li>ΔAPPT < 3 seconds (not time-dependent)</li>
+            </ul>
+            <p style="margin-top: 10px; color: #d32f2f;"><strong>Action:</strong> Further testing for inhibitor type, specialist referral</p>
+        </div>
+
+        <div class="interpretation-card">
+            <h4>🔴 Time-Dependent Inhibitor</h4>
+            <p><strong>Patient Scenario:</strong> Acquired Factor VIII Inhibitor (developing)</p>
+            <ul>
+                <li>APPT1: 58 seconds (prolonged)</li>
+                <li>Immediate Mix: Corrects to 38 seconds</li>
+                <li>RI_CT: 5% (<strong>< 11%</strong> = CORRECTED)</li>
+                <li>Post-incubation: NOW prolonged again!</li>
+                <li>RI_ICT: 25% with ΔAPPT > 3s (<strong>DEVELOPED!</strong>)</li>
+            </ul>
+            <p style="margin-top: 10px; color: #d32f2f;"><strong>Warning:</strong> Inhibitor emerging, needs immediate follow-up and specialist care</p>
+        </div>
+    </div>
+
+    <div class="clinical-value">
+        <h4>💡 Clinical Value & Patient Impact</h4>
+        <p><strong>Why 7-Step Automation Matters:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 10px;">
+            <li><strong>Faster Diagnosis:</strong> Full results in ~2.5 hours vs 1-2 days manual method</li>
+            <li><strong>Better Accuracy:</strong> No technician calculation errors, automated precision</li>
+            <li><strong>Catches Developing Inhibitors:</strong> Extended incubation finds time-dependent inhibitors others miss</li>
+            <li><strong>Reduced Patient Risk:</strong> Early detection of inhibitors prevents serious bleeding complications</li>
+            <li><strong>Better Treatment Decisions:</strong> Doctors know immediately if it's factor deficiency (simple replacement) vs inhibitor (complex management)</li>
+        </ul>
+    </div>
+
+    <h3>Why CX-9000 Mixing Study is Superior</h3>
+    <table class="specs-table">
+        <tr>
+            <th>Feature</th>
+            <th>CX-9000</th>
+            <th>Competitors</th>
+        </tr>
+        <tr>
+            <td><strong>Automated Steps</strong></td>
+            <td>7 steps (FULLY automatic)</td>
+            <td>2-3 steps (manual mixing)</td>
+        </tr>
+        <tr>
+            <td><strong>Max Incubation Time</strong></td>
+            <td>120 minutes (2 hours)</td>
+            <td>12-15 minutes</td>
+        </tr>
+        <tr>
+            <td><strong>Time-Dependent Detection</strong></td>
+            <td>YES - Extended incubation catches developing inhibitors</td>
+            <td>Limited - May miss emerging inhibitors</td>
+        </tr>
+        <tr>
+            <td><strong>Manual Mixing Error Risk</strong></td>
+            <td>ZERO - Fully automated</td>
+            <td>HIGH - Human error in ratios</td>
+        </tr>
+        <tr>
+            <td><strong>Technician Time per Test</strong></td>
+            <td>5 minutes (load sample, analyzer does everything)</td>
+            <td>30-45 minutes (manual procedures)</td>
+        </tr>
+        <tr>
+            <td><strong>Result Consistency</strong></td>
+            <td>Identical results every time</td>
+            <td>Varies by technician</td>
+        </tr>
+        <tr>
+            <td><strong>Clinical Advantage</strong></td>
+            <td>Gold standard for complex case diagnosis</td>
+            <td>Basic screening only</td>
+        </tr>
+    </table>
 </div>
 
 <!-- TECHNICAL EXCELLENCE -->
