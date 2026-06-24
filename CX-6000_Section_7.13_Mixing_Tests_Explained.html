@@ -720,8 +720,22 @@
     <!-- KEY CALCULATIONS -->
     <h3>How APPT Results Are Used to Calculate Diagnostic Indices</h3>
 
+    <div class="critical">
+        <h4>⚠️ Important Note About Manual vs. Calculations</h4>
+        <p><strong>Status of RI_CT and RI_ICT in CX-6000/CX-6010 Manual:</strong></p>
+        <p>The CX-6000/CX-6010 operator's manual Section 7.13 does NOT explicitly state the formulas for RI_CT or RI_ICT. The manual only describes the procedural steps for performing mixing tests.</p>
+        <p><strong>What this means:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>✅ The analyzer AUTOMATICALLY calculates these indices (you don't need to do manual math)</li>
+            <li>✅ The formulas shown below are STANDARD formulas used in coagulation testing</li>
+            <li>❓ The exact formula implementation may vary by analyzer configuration</li>
+        </ul>
+        <p><strong>Recommendation:</strong> Contact Mindray support for the exact formula used in your specific analyzer configuration if you need verification.</p>
+    </div>
+
     <div class="requirement-box">
         <h4>Correction Index - Immediate (RI_CT)</h4>
+        <p><strong>Standard Formula (Not explicitly in manual):</strong></p>
         <div style="background: white; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
             <strong>RI_CT = [(APPT1 - APPT2) / APPT1] × 100%</strong>
         </div>
@@ -735,6 +749,7 @@
 
     <div class="requirement-box">
         <h4>Correction Index - Post-Incubation (RI_ICT)</h4>
+        <p><strong>Standard Formula (Not explicitly in manual):</strong></p>
         <div style="background: white; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
             <strong>RI_ICT = [(APPT1 - APPT6) / APPT1] × 100%</strong>
         </div>
