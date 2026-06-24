@@ -457,6 +457,345 @@
     </div>
 </div>
 
+<!-- APPT1-APPT7 DETAILED EXPLANATION -->
+<div class="section">
+    <h2>APPT Measurements Explained: APPT1 Through APPT7</h2>
+
+    <h3>The Complete Sequence of APPT Tests During Mixing Study</h3>
+
+    <p>During a CX-6000 mixing study, the analyzer performs multiple APPT measurements at different stages. Each measurement has a specific purpose and name. Understanding what each one represents is critical for interpreting results correctly.</p>
+
+    <div class="note-box">
+        <strong>Key Principle:</strong> The numbering (APPT1, APPT2, etc.) represents the SEQUENCE and TIMING of tests, not the patient. All tests are on the SAME patient sample in different states (patient baseline, immediately after mixing, after incubation, etc.).
+    </div>
+
+    <!-- APPT1 -->
+    <div class="step-box">
+        <h4>🔴 APPT1: Patient Baseline (Initial Test)</h4>
+
+        <p><strong>When it happens:</strong> FIRST test, at very beginning of mixing study</p>
+
+        <p><strong>What it measures:</strong> Patient's own plasma APPT value WITHOUT any mixing</p>
+
+        <p><strong>How it's done:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Analyzer aspirates 150 µL of pure patient plasma</li>
+            <li>Heats to 37°C</li>
+            <li>Adds APPT reagent (partial thromboplastin + calcium)</li>
+            <li>Measures time until fibrin formation detected at 405nm</li>
+        </ul>
+
+        <p><strong>Typical values:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Normal patient: 25-35 seconds</li>
+            <li>Prolonged (why mixing study ordered): > 40 seconds</li>
+        </ul>
+
+        <p><strong>Clinical meaning:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Confirms APPT is abnormally prolonged</li>
+            <li>Serves as reference baseline for all later comparisons</li>
+            <li>If APPT1 is normal but study ordered anyway: may indicate previous test error or patient condition changed</li>
+        </ul>
+
+        <p><strong>Example (Hemophilia A):</strong> Patient's APPT1 = 65 seconds (VERY prolonged - red flag for deficiency or inhibitor)</p>
+    </div>
+
+    <!-- APPT2 -->
+    <div class="step-box">
+        <h4>🟡 APPT2: Immediate Mix Test #1 (First Test After Mixing)</h4>
+
+        <p><strong>When it happens:</strong> Within 2-5 minutes after creating 1:1 mix of patient + normal plasma</p>
+
+        <p><strong>What it measures:</strong> APPT of freshly mixed sample (immediate correction test)</p>
+
+        <p><strong>How it's done:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Analyzer mixes exactly 50% patient plasma + 50% normal plasma (precise 1:1 ratio)</li>
+            <li>Tests the fresh mix immediately (no waiting, no incubation yet)</li>
+            <li>Adds APPT reagent to the mixed sample</li>
+            <li>Measures clotting time at 405nm</li>
+        </ul>
+
+        <p><strong>Typical values:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>If corrects (deficiency): Returns to NORMAL range (25-35 sec)</li>
+            <li>If doesn't correct (inhibitor): Stays prolonged (>40 sec)</li>
+        </ul>
+
+        <p><strong>Clinical meaning:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>First clue about whether patient has deficiency or inhibitor</li>
+            <li>If much shorter than APPT1 → suggests deficiency (mixing helps)</li>
+            <li>If similar to APPT1 → suggests inhibitor (mixing doesn't help)</li>
+        </ul>
+
+        <p><strong>Example (Hemophilia A):</strong> APPT2 = 35 seconds (improved from 65! → suggests deficiency)</p>
+        <p><strong>Example (Lupus LA):</strong> APPT2 = 55 seconds (barely improved from 62 → suggests inhibitor)</p>
+    </div>
+
+    <!-- APPT3 -->
+    <div class="step-box">
+        <h4>🟡 APPT3: Immediate Mix Test #2 (Quality Control Duplicate)</h4>
+
+        <p><strong>When it happens:</strong> Immediately after APPT2 (within seconds)</p>
+
+        <p><strong>What it measures:</strong> REPEAT of APPT2 (same mixed sample, tested again)</p>
+
+        <p><strong>How it's done:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Tests the SAME fresh mix again</li>
+            <li>Ensures reproducibility of results</li>
+            <li>CV (coefficient of variation) should be < 5%</li>
+        </ul>
+
+        <p><strong>Why two tests (APPT2 and APPT3)?</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Quality control - confirms APPT2 result wasn't a fluke</li>
+            <li>If APPT2 and APPT3 don't match closely → analyzer flags error</li>
+            <li>Professional standard: all coagulation tests done in duplicate</li>
+        </ul>
+
+        <p><strong>Typical values:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Should be VERY similar to APPT2 (within 1-2 seconds)</li>
+            <li>Example: APPT2 = 35 sec, APPT3 = 36 sec (excellent reproducibility)</li>
+        </ul>
+
+        <p><strong>Clinical meaning:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Confirms the immediate mix result is reliable</li>
+            <li>If APPT2 and APPT3 differ > 5%: investigate sample quality or analyzer issue</li>
+        </ul>
+
+        <p><strong>Used in calculations:</strong> Both APPT2 and APPT3 are averaged to calculate Correction Index (RI_CT)</p>
+    </div>
+
+    <!-- INCUBATION PERIOD -->
+    <div class="step-box" style="background: linear-gradient(135deg, #fff3cd 0%, #fffacd 100%); border-left: 4px solid #ffc107;">
+        <h4>⏱️ INCUBATION PERIOD (Between APPT3 and APPT6)</h4>
+
+        <p><strong>What happens:</strong> Remaining mixed plasma placed in incubator (NOT tested)</p>
+
+        <p><strong>Duration:</strong> Configurable, typically 30-120 minutes at 37°C</p>
+
+        <p><strong>Temperature:</strong> Exactly 37°C (body temperature) ± 0.2°C precision</p>
+
+        <p><strong>Purpose:</strong> Allows time-dependent inhibitors to activate/develop</p>
+
+        <p><strong>Why this is critical:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Factor VIII antibodies don't activate instantly</li>
+            <li>At room temperature: antibodies may be inactive</li>
+            <li>At 37°C for extended time: antibodies fully activate</li>
+            <li>This is why CX-9000's 120-minute incubation catches what 15-minute competitors miss!</li>
+        </ul>
+
+        <p><strong>No APPT tests during incubation:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Incubation period is WAITING period</li>
+            <li>Next tests (APPT6/7) happen AFTER incubation completes</li>
+        </ul>
+    </div>
+
+    <!-- APPT6 -->
+    <div class="step-box">
+        <h4>🔵 APPT6: Post-Incubation Test #1 (After Incubation)</h4>
+
+        <p><strong>When it happens:</strong> AFTER incubation period completes (e.g., after 120 minutes at 37°C)</p>
+
+        <p><strong>What it measures:</strong> APPT of the SAME mixed sample after it's been warmed and given time for inhibitor activation</p>
+
+        <p><strong>How it's done:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Removes mixed plasma from incubator</li>
+            <li>Adds fresh APPT reagent</li>
+            <li>Tests the now-incubated mixed sample</li>
+            <li>Measures clotting time at 405nm</li>
+        </ul>
+
+        <p><strong>Typical values:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>If NO time-dependent inhibitor: Similar to APPT2/3 (deficiency stays corrected)</li>
+            <li>If TIME-DEPENDENT INHIBITOR present: MUCH WORSE (longer) than APPT2/3 (correction is lost!)</li>
+        </ul>
+
+        <p><strong>Clinical meaning:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li><strong>If APPT6 ≈ APPT2/3:</strong> No time-dependent effect, patient likely has simple factor deficiency</li>
+            <li><strong>If APPT6 >> APPT2/3 (significantly worse):</strong> Time-dependent inhibitor detected! Antibodies developed during incubation and inactivated normal factors</li>
+        </ul>
+
+        <p><strong>Example (Hemophilia A with Developing Factor VIII Antibodies):</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>APPT1 (patient): 58 seconds</li>
+            <li>APPT2/3 (immediate mix): 38 seconds (looked corrected!)</li>
+            <li>APPT6 (after 120-min incubation): 48 seconds (WORSENED by 10 seconds!)</li>
+            <li>Diagnosis: TIME-DEPENDENT INHIBITOR (developing antibody)</li>
+        </ul>
+    </div>
+
+    <!-- APPT7 -->
+    <div class="step-box">
+        <h4>🔵 APPT7: Post-Incubation Test #2 (Quality Control Duplicate)</h4>
+
+        <p><strong>When it happens:</strong> Immediately after APPT6</p>
+
+        <p><strong>What it measures:</strong> REPEAT of APPT6 (same incubated sample, tested again)</p>
+
+        <p><strong>How it's done:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Tests the SAME incubated mix again</li>
+            <li>Ensures reproducibility of post-incubation result</li>
+            <li>CV should be < 5%</li>
+        </ul>
+
+        <p><strong>Why two tests (APPT6 and APPT7)?</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Quality control - confirms APPT6 result</li>
+            <li>If APPT6 and APPT7 don't match: error flag</li>
+            <li>Post-incubation samples may be more prone to variability</li>
+        </ul>
+
+        <p><strong>Typical values:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Should match APPT6 closely (within 1-2 seconds)</li>
+            <li>Example: APPT6 = 48 sec, APPT7 = 50 sec</li>
+        </ul>
+
+        <p><strong>Used in calculations:</strong> Both APPT6 and APPT7 averaged to calculate Post-Incubation Correction Index (RI_ICT)</p>
+    </div>
+
+    <!-- SUMMARY TABLE -->
+    <h3>Complete APPT Sequence - Quick Reference</h3>
+
+    <table class="table">
+        <tr>
+            <th>Test</th>
+            <th>Timing</th>
+            <th>Sample State</th>
+            <th>Purpose</th>
+            <th>Normal Value</th>
+        </tr>
+        <tr>
+            <td><strong>APPT1</strong></td>
+            <td>Initial</td>
+            <td>Pure patient plasma</td>
+            <td>Patient baseline (why mixing needed?)</td>
+            <td>25-35 sec or >40 sec if abnormal</td>
+        </tr>
+        <tr>
+            <td><strong>APPT2</strong></td>
+            <td>Immediate (2-5 min)</td>
+            <td>Fresh 1:1 patient + normal mix</td>
+            <td>First correction test</td>
+            <td>Normal range IF corrects, prolonged IF inhibitor</td>
+        </tr>
+        <tr>
+            <td><strong>APPT3</strong></td>
+            <td>Immediate (seconds after APPT2)</td>
+            <td>Same fresh mix (duplicate)</td>
+            <td>QC verification of APPT2</td>
+            <td>Should match APPT2 (CV < 5%)</td>
+        </tr>
+        <tr style="background: #ffffcc;">
+            <td colspan="5" style="text-align: center;"><strong>⏱️ INCUBATION at 37°C for 30-120 minutes (NO tests during this time)</strong></td>
+        </tr>
+        <tr>
+            <td><strong>APPT6</strong></td>
+            <td>After incubation</td>
+            <td>Incubated 1:1 mix (warmed & activated)</td>
+            <td>Post-incubation correction test (detects time-dependent inhibitor)</td>
+            <td>Normal IF no time-dependent, worse IF developing antibody</td>
+        </tr>
+        <tr>
+            <td><strong>APPT7</strong></td>
+            <td>After incubation (seconds after APPT6)</td>
+            <td>Same incubated mix (duplicate)</td>
+            <td>QC verification of APPT6</td>
+            <td>Should match APPT6 (CV < 5%)</td>
+        </tr>
+    </table>
+
+    <!-- KEY CALCULATIONS -->
+    <h3>How APPT Results Are Used to Calculate Diagnostic Indices</h3>
+
+    <div class="requirement-box">
+        <h4>Correction Index - Immediate (RI_CT)</h4>
+        <div style="background: white; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
+            <strong>RI_CT = [(APPT1 - APPT2) / APPT1] × 100%</strong>
+        </div>
+        <p><strong>Uses:</strong> APPT1 (patient baseline) and APPT2/3 (immediate mix average)</p>
+        <p><strong>Interpretation:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>RI_CT > 11%: Mix CORRECTS → likely Factor Deficiency</li>
+            <li>RI_CT < 11%: Mix DOES NOT CORRECT → likely Inhibitor</li>
+        </ul>
+    </div>
+
+    <div class="requirement-box">
+        <h4>Correction Index - Post-Incubation (RI_ICT)</h4>
+        <div style="background: white; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
+            <strong>RI_ICT = [(APPT1 - APPT6) / APPT1] × 100%</strong>
+        </div>
+        <p><strong>Uses:</strong> APPT1 (patient baseline) and APPT6/7 (post-incubation average)</p>
+        <p><strong>Interpretation:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>RI_ICT > 11%: Mix STILL CORRECTS → Factor Deficiency (no time-dependent inhibitor)</li>
+            <li>RI_ICT < 11%: Mix LOST CORRECTION → Time-Dependent Inhibitor (antibodies activated during incubation!)</li>
+        </ul>
+    </div>
+
+    <div class="requirement-box">
+        <h4>Time-Dependent Assessment</h4>
+        <div style="background: white; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
+            <strong>Δ APPT = APPT6/7 - APPT2/3</strong>
+        </div>
+        <p><strong>What it measures:</strong> How much the result CHANGED after incubation</p>
+        <p><strong>Interpretation:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Δ APPT < 3 seconds: NO time-dependent effect (normal pattern)</li>
+            <li>Δ APPT > 3 seconds WORSE: SIGNIFICANT time-dependent inhibitor (critical finding!)</li>
+        </ul>
+        <p><strong>Example:</strong> APPT2/3 = 38 sec, APPT6/7 = 50 sec → Δ APPT = 12 sec (much worse!) → TIME-DEPENDENT INHIBITOR DETECTED</p>
+    </div>
+
+    <!-- CLINICAL EXAMPLE -->
+    <h3>Complete Example: All APPT Values in Real Case</h3>
+
+    <div class="clinical-example">
+        <h4>Case: Hemophilia A Patient (Factor VIII Deficiency)</h4>
+        <ul style="margin-left: 20px;">
+            <li><strong>APPT1:</strong> 65 seconds (patient alone - very prolonged)</li>
+            <li><strong>APPT2:</strong> 35 seconds (immediate mix test 1)</li>
+            <li><strong>APPT3:</strong> 36 seconds (immediate mix test 2)</li>
+            <li><strong>RI_CT:</strong> 46% (CORRECTS - > 11%)</li>
+            <li><strong>Incubation:</strong> 120 minutes at 37°C</li>
+            <li><strong>APPT6:</strong> 35 seconds (post-incubation test 1)</li>
+            <li><strong>APPT7:</strong> 37 seconds (post-incubation test 2)</li>
+            <li><strong>RI_ICT:</strong> 43% (STAYS CORRECTED - > 11%)</li>
+            <li><strong>Δ APPT:</strong> 1 second (NO worsening - normal pattern)</li>
+            <li><strong>FINAL DIAGNOSIS:</strong> ✅ FACTOR DEFICIENCY (Hemophilia A)</li>
+        </ul>
+    </div>
+
+    <div class="clinical-example" style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);">
+        <h4>Case: Developing Factor VIII Inhibitor (Time-Dependent)</h4>
+        <ul style="margin-left: 20px;">
+            <li><strong>APPT1:</strong> 58 seconds (patient alone - prolonged)</li>
+            <li><strong>APPT2:</strong> 38 seconds (immediate mix - LOOKS CORRECTED!)</li>
+            <li><strong>APPT3:</strong> 39 seconds (immediate mix repeat)</li>
+            <li><strong>RI_CT:</strong> 34% (CORRECTS - > 11%)</li>
+            <li><strong>Incubation:</strong> 120 minutes at 37°C (antibodies activate!)</li>
+            <li><strong>APPT6:</strong> 48 seconds (post-incubation - MUCH WORSE!)</li>
+            <li><strong>APPT7:</strong> 50 seconds (post-incubation repeat)</li>
+            <li><strong>RI_ICT:</strong> 14% (LOST CORRECTION - < 11%)</li>
+            <li><strong>Δ APPT:</strong> 11 seconds (SIGNIFICANTLY WORSE after incubation)</li>
+            <li><strong>FINAL DIAGNOSIS:</strong> 🔴 TIME-DEPENDENT INHIBITOR (Developing Factor VIII Antibody) - URGENT!</li>
+        </ul>
+    </div>
+</div>
+
 <!-- INTERPRETATION SUMMARY -->
 <div class="section">
     <h2>Understanding Mixing Test Results</h2>
