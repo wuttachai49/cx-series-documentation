@@ -667,97 +667,135 @@
     </div>
 
     <!-- SUMMARY TABLE -->
-    <h3>Complete APPT Sequence - Quick Reference</h3>
+    <h3>Complete APPT1-7 Sequence - Official Definition Table</h3>
 
     <table class="table">
         <tr>
-            <th>Test</th>
-            <th>Timing</th>
-            <th>Sample State</th>
+            <th>Test #</th>
+            <th>Sample Composition</th>
+            <th>Incubation</th>
+            <th>Test Timing</th>
             <th>Purpose</th>
-            <th>Normal Value</th>
+            <th>Expected Value (seconds)</th>
         </tr>
         <tr>
             <td><strong>APPT1</strong></td>
-            <td>Initial</td>
-            <td>Pure patient plasma</td>
-            <td>Patient baseline (why mixing needed?)</td>
-            <td>25-35 sec or >40 sec if abnormal</td>
+            <td>Patient Plasma (PP) alone</td>
+            <td>None</td>
+            <td>Immediately</td>
+            <td>Patient baseline clotting time</td>
+            <td>25-35 sec (normal) or >40 sec (prolonged)</td>
         </tr>
         <tr>
             <td><strong>APPT2</strong></td>
-            <td>Immediate (2-5 min)</td>
-            <td>Fresh 1:1 patient + normal mix</td>
-            <td>First correction test</td>
-            <td>Normal range IF corrects, prolonged IF inhibitor</td>
+            <td>Normal Pooled Plasma (NPP) alone</td>
+            <td>None</td>
+            <td>Immediately</td>
+            <td>Normal plasma baseline QC</td>
+            <td>25-35 sec (must be normal range)</td>
         </tr>
         <tr>
             <td><strong>APPT3</strong></td>
-            <td>Immediate (seconds after APPT2)</td>
-            <td>Same fresh mix (duplicate)</td>
-            <td>QC verification of APPT2</td>
-            <td>Should match APPT2 (CV < 5%)</td>
+            <td>PP + NPP 1:1 fresh mix</td>
+            <td>None - test fresh</td>
+            <td>Immediately after mixing</td>
+            <td>Immediate correction test (RI_CT calculation)</td>
+            <td>Normal IF corrects, prolonged IF doesn't correct</td>
+        </tr>
+        <tr>
+            <td><strong>APPT4</strong></td>
+            <td>Patient Plasma (PP) alone</td>
+            <td>37°C for 2 hours</td>
+            <td>Test after incubation</td>
+            <td>Time-dependent effect on patient sample</td>
+            <td>May change if inhibitor is time-dependent</td>
+        </tr>
+        <tr>
+            <td><strong>APPT5</strong></td>
+            <td>Normal Pooled Plasma (NPP) alone</td>
+            <td>37°C for 2 hours</td>
+            <td>Test after incubation</td>
+            <td>Time-dependent effect on normal sample (reference)</td>
+            <td>Should remain in normal range</td>
         </tr>
         <tr style="background: #ffffcc;">
-            <td colspan="5" style="text-align: center;"><strong>⏱️ INCUBATION at 37°C for 30-120 minutes (NO tests during this time)</strong></td>
-        </tr>
-        <tr>
             <td><strong>APPT6</strong></td>
-            <td>After incubation</td>
-            <td>Incubated 1:1 mix (warmed & activated)</td>
-            <td>Post-incubation correction test (detects time-dependent inhibitor)</td>
-            <td>Normal IF no time-dependent, worse IF developing antibody</td>
+            <td><strong>PP + NPP 1:1 THEN incubated</strong></td>
+            <td><strong>37°C for 2 hours AFTER mixing</strong></td>
+            <td><strong>Test immediately after incubation</strong></td>
+            <td><strong>Post-incubation correction (fresh mix then incubated)</strong></td>
+            <td><strong>Changes if time-dependent inhibitor present</strong></td>
         </tr>
-        <tr>
+        <tr style="background: #ffffcc;">
             <td><strong>APPT7</strong></td>
-            <td>After incubation (seconds after APPT6)</td>
-            <td>Same incubated mix (duplicate)</td>
-            <td>QC verification of APPT6</td>
-            <td>Should match APPT6 (CV < 5%)</td>
+            <td><strong>Incubated PP + Incubated NPP 1:1 mixed</strong></td>
+            <td><strong>37°C for 2 hours SEPARATELY, then mixed</strong></td>
+            <td><strong>Test immediately after mixing incubated samples</strong></td>
+            <td><strong>Post-incubation correction (incubate then mix)</strong></td>
+            <td><strong>Tests inhibitor development after separate incubation</strong></td>
         </tr>
     </table>
 
-    <!-- KEY CALCULATIONS -->
-    <h3>How APPT Results Are Used to Calculate Diagnostic Indices</h3>
-
-    <div class="critical">
-        <h4>⚠️ Important Note About Manual vs. Calculations</h4>
-        <p><strong>Status of RI_CT and RI_ICT in CX-6000/CX-6010 Manual:</strong></p>
-        <p>The CX-6000/CX-6010 operator's manual Section 7.13 does NOT explicitly state the formulas for RI_CT or RI_ICT. The manual only describes the procedural steps for performing mixing tests.</p>
-        <p><strong>What this means:</strong></p>
-        <ul style="margin-left: 20px;">
-            <li>✅ The analyzer AUTOMATICALLY calculates these indices (you don't need to do manual math)</li>
-            <li>✅ The formulas shown below are STANDARD formulas used in coagulation testing</li>
-            <li>❓ The exact formula implementation may vary by analyzer configuration</li>
-        </ul>
-        <p><strong>Recommendation:</strong> Contact Mindray support for the exact formula used in your specific analyzer configuration if you need verification.</p>
-    </div>
-
-    <div class="requirement-box">
-        <h4>Correction Index - Immediate (RI_CT)</h4>
-        <p><strong>Standard Formula (Not explicitly in manual):</strong></p>
-        <div style="background: white; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
-            <strong>RI_CT = [(APPT1 - APPT2) / APPT1] × 100%</strong>
-        </div>
-        <p><strong>Uses:</strong> APPT1 (patient baseline) and APPT2/3 (immediate mix average)</p>
-        <p><strong>Interpretation:</strong></p>
-        <ul style="margin-left: 20px;">
-            <li>RI_CT > 11%: Mix CORRECTS → likely Factor Deficiency</li>
-            <li>RI_CT < 11%: Mix DOES NOT CORRECT → likely Inhibitor</li>
+    <div class="note-box" style="margin-top: 20px;">
+        <strong>🔑 Key Difference - APPT6 vs APPT7:</strong>
+        <ul style="margin-left: 20px; margin-top: 10px;">
+            <li><strong>APPT6:</strong> Mix THEN incubate - tests the effect on mixed plasma</li>
+            <li><strong>APPT7:</strong> Incubate THEN mix - tests the effect on individual samples that are incubated separately</li>
+            <li>Comparing APPT6 and APPT7 reveals different inhibitor activation patterns</li>
         </ul>
     </div>
 
+    <!-- KEY CALCULATIONS - OFFICIAL FORMULAS -->
+    <h3>Official Calculation Formulas (From Mindray)</h3>
+
+    <div class="highlight">
+        <h4>✅ Official Formulas from Mindray Presentation</h4>
+        <p>These are the OFFICIAL formulas used by Mindray for the CX-9000 mixing study calculations:</p>
+    </div>
+
     <div class="requirement-box">
-        <h4>Correction Index - Post-Incubation (RI_ICT)</h4>
-        <p><strong>Standard Formula (Not explicitly in manual):</strong></p>
-        <div style="background: white; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
-            <strong>RI_ICT = [(APPT1 - APPT6) / APPT1] × 100%</strong>
+        <h4>Formula 1: RI_CT (Immediate Correction Index)</h4>
+        <p><strong>Calculation for APPT3 (Immediate Mix Test):</strong></p>
+        <div style="background: white; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace; font-size: 14px;">
+            <strong>RI_CT = [(APPT3 - APPT2) / APPT1] × 100%</strong>
         </div>
-        <p><strong>Uses:</strong> APPT1 (patient baseline) and APPT6/7 (post-incubation average)</p>
+        <p><strong>Where:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li><strong>APPT1</strong> = Patient plasma baseline (denominator/reference)</li>
+            <li><strong>APPT2</strong> = Normal plasma baseline (subtracted as reference)</li>
+            <li><strong>APPT3</strong> = Fresh 1:1 mix (numerator/test result)</li>
+        </ul>
+        <p><strong>Threshold:</strong> <strong style="color: red;">11%</strong></p>
         <p><strong>Interpretation:</strong></p>
         <ul style="margin-left: 20px;">
-            <li>RI_ICT > 11%: Mix STILL CORRECTS → Factor Deficiency (no time-dependent inhibitor)</li>
-            <li>RI_ICT < 11%: Mix LOST CORRECTION → Time-Dependent Inhibitor (antibodies activated during incubation!)</li>
+            <li><strong>RI_CT < 11%:</strong> Mix DOES NOT CORRECT → Inhibitor present</li>
+            <li><strong>RI_CT > 11%:</strong> Mix CORRECTS → Factor Deficiency (likely)</li>
+        </ul>
+    </div>
+
+    <div class="requirement-box">
+        <h4>Formula 2: RI_ICT (Post-Incubation Correction Index)</h4>
+        <p><strong>Calculation for APPT6 (After Incubation - Mix Then Incubate):</strong></p>
+        <div style="background: white; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace; font-size: 14px;">
+            <strong>RI_ICT = [(APPT6 - APPT5) / APPT4] × 100%</strong>
+        </div>
+        <p><strong>Where:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li><strong>APPT4</strong> = Incubated patient plasma (denominator/reference after heating)</li>
+            <li><strong>APPT5</strong> = Incubated normal plasma (subtracted as reference after heating)</li>
+            <li><strong>APPT6</strong> = Incubated 1:1 mix (numerator/test result after heating)</li>
+        </ul>
+        <p><strong>Threshold:</strong> <strong style="color: red;">11%</strong></p>
+        <p><strong>Additional Check - Time-Temperature Dependency:</strong></p>
+        <div style="background: #fff3cd; padding: 10px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
+            <strong>Δ APPT = APPT7 - APPT6</strong><br>
+            <strong>If Δ APPT > 3 seconds:</strong> Time-dependent inhibitor present
+        </div>
+        <p><strong>Interpretation:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li><strong>RI_ICT < 11% & Δ APPT ≤ 3s:</strong> Factor Deficiency (stays corrected)</li>
+            <li><strong>RI_ICT > 11% & Δ APPT > 3s:</strong> Time-Dependent Inhibitor (worsens after incubation)</li>
+            <li><strong>RI_ICT > 11% & Δ APPT ≤ 3s:</strong> Non-Time-Dependent Inhibitor (immediate-acting)</li>
         </ul>
     </div>
 
